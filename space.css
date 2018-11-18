@@ -1,0 +1,494 @@
+body{
+  margin: 0;
+  background-color: #f2f8ff;
+}
+#cuprins{
+  font-family: Georgia;
+  margin: 5% 10% 3% 10%;
+  text-align: justify;
+  color: #165182;
+}
+h1{
+  color: #22649b;
+  font-family:  space;
+  text-align: center;
+  font-size: 4em;
+  letter-spacing: 2px;
+}
+
+header{
+    background-color: #cee8ff;
+    padding: 5%;
+    border: 1px solid #8bc4f4;
+}
+#bar{
+  font-weight: bold;
+  color: #22649b;
+  background-color: #eaf2ff;/*#afdaff;*/
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  border: 1px solid #8bc4f4;
+}
+#search-icon{
+  position: absolute;
+  top:15%;
+  right: 1%;
+  width: 1.3%;
+  cursor: pointer;
+}
+#space-icon{
+  width: 2%;
+}
+#search-bar{
+  width: 10%;
+  border-radius: 10px;
+  border: 1.3px solid grey;
+  position: absolute;
+  top:14%;
+  right: 3%;
+  margin-left: 84%;
+  padding: 0.3%;
+}
+#text-bar{
+    font-family: space;
+    font-size: 1.1em;
+    color: #22649b;
+    position: absolute; top:25%; left:2.5%;
+}
+nav{
+  font-family: blankspace;
+}
+
+h4{
+  font-size: 1.8em;
+  color: #22649b;
+  letter-spacing: 2px;
+  font-family: blankspace;
+}
+/************* TABEL COMETE *****************/
+
+table{
+  border-collapse: collapse;
+}
+td,th{
+  border: 1px solid #5d98cc;
+  text-align: left;
+  padding: 5px;
+  padding-right: 70px;
+  background-color: #eff7ff;
+}
+th{
+  background-color: #e5f2ff
+}
+
+/************* BUTON ****************/
+
+input[type=button]{
+
+  font-family: blankspace;
+  color: #164b77;
+  border-color: #4088c4;
+  background-color: #c4e2ff;
+  cursor: pointer;
+  border-radius: 10px;
+
+  transition-duration: 0.2s;
+}
+
+input[type=button]:hover{
+  color: white;
+  background-color: #8ac3f2;
+}
+#randomPlanet{
+  padding: 0.5%;
+}
+
+#corpuri{
+  margin-left: 13%;
+  margin-right: 13%;
+  margin-bottom: 7%;
+
+}
+
+#planets{
+  background-color: black;
+  border-radius: 20px;
+}
+
+/************* QUIZ ****************/
+
+/*buton*/
+
+#verificaQuizButon{
+    width: 10%;
+    font-size: 1.2em;
+    padding: 10px;
+
+}
+
+/*form*/
+
+form{
+  margin-top: 40px;
+  font-size: 1.3em;
+}
+
+input[type="radio"]{
+  visibility: hidden;
+  z-index: -1;
+}
+#labelRadio{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  margin-bottom: 10px;
+  padding: 5px 30px 0px 30px;
+
+}
+
+#labelRadio::before{
+  content: " ";
+  position: absolute;
+  border: 2px solid #6da6d6;
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 18px;
+  z-index: -1;
+
+  left: 0;
+  top: 3px;
+}
+
+input[type="radio"]:checked+#labelRadio{
+  color:white;
+  padding-left:10px;
+  padding-right: 10px;
+}
+
+input[type="radio"]:checked + #labelRadio:before{
+  width: 96%;
+  height: 76%;
+  background-color: #8ac3f2;
+}
+
+/* Transition*/
+#labelRadio,
+#labelRadio::before {
+  transition: .10s all ease;
+}
+
+/************ MENIU DROPDOWN ************/
+
+#meniuMic{
+  display: none;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.dropdown_content{ /*meniul din drop down */
+  display: none;
+  z-index: 1;
+  position: relative;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  list-style-type: none;
+  color: white;
+  background-color: #bbddf9;
+  text-align: center;
+  padding: 0%;
+  border: 1px solid #85bcea;
+}
+
+
+ul>li:hover >ul{
+  /*visibility: visible;*/
+  display: block;
+}
+
+.meniu_dropdown{
+  display: block;
+  list-style-type: none;
+  display: inline-block;
+  font-size: 1.2em;
+  width: 85%;
+  text-align: right;
+  margin-left: 1%;
+  margin-top: 0%;
+  position: absolute;
+}
+
+nav>ul>li{
+  vertical-align: top;
+  display: inline-block;
+}
+
+nav>ul>li>ul>li{ /* fiecare item din meniul drop down */
+  padding: 2%;
+  border: 1px solid #a8d1f4;
+}
+
+nav>ul>li>ul>li:hover{
+  background-color: #85c1f2;
+}
+
+ul>li:nth-child(even){
+  background-color:#9ecef7;
+}
+ul>li:nth-child(odd){
+  background-color:#afdaff;
+}
+.item{
+  color: white;
+  border: 1px solid #91c1ea;
+  padding: 20px;
+  font-size: 1.1em;
+}
+.item:hover{
+  background-color: #85bcea;
+}
+
+
+/********** GALERIE ************/
+
+#galerie{
+  margin-left: 8%;
+  margin-bottom: 5%;
+}
+
+figure{
+  border: 1px solid #97c5ed;
+  width: 100%;
+  background-color: #dbeeff;
+}
+.poza_dreapta{
+    width: 20%;
+    padding: 1%;
+    float: right;
+    margin: 1%;
+    border-radius: 10px;
+
+}
+.img_dr{
+  width: 100%;
+  border: 1px solid #a2d1f9;
+  border-radius: 10px;
+}
+
+figcaption{
+  color: #22649b;
+  padding: 5%;
+  text-align: center;
+  font-family: louisCafe;
+}
+
+.img{
+  width: 80%;
+  margin: 5% 10% 3% 10%;
+  border: 1px solid #a2d1f9;
+  border-radius: 7px;
+}
+
+.figBox{
+  width: 20%;
+  display: inline-block;
+  padding: 1%;
+  vertical-align: top;
+}
+
+/*************** MODAL GALERIE *************/
+
+.modal{
+  background-color: rgba(0,0,0,0.5);
+  z-index: 3;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding-top: 5%;
+  overflow: auto;
+}
+
+#modal-galerie{
+  display: none;
+}
+
+#modal-content{
+  display: block;
+  border:1px solid #97c5ed;
+  padding: 1%;
+  padding-top: 3%;
+  width: 50%;
+  background-color: #dbeeff;
+  margin: auto;
+  border-radius: 10px;
+
+}
+
+#poza{
+  width: 100%;
+  border-radius: 7px;
+  border: 1px solid #a2d1f9;
+}
+
+.closeButton{
+  background-color: #a9d0f2;
+  padding: 0.6%;
+  color: #12538c;
+  font-family: louisCafe;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  float: right;
+  margin-right: 25%;
+  border: 1px solid #5d98cc;
+}
+
+.closeButton:hover{
+
+ background-color: #86c4f9;
+  color: #12538c;
+  font-weight: bold;
+}
+
+/************* ABONARE **************/
+
+
+#modal-content-abonare{
+  display: block;
+  border:3px solid #5d98cc;
+  padding: 2%;
+  padding-top: 3%;
+  background-color: #e5f2ff;
+  margin: auto;
+
+  text-align: center;
+  width: 26%;
+  height: 33%;
+  color: #12548c;
+  font-size: 1.1em;
+  border-radius: 10px;
+}
+
+#closeButtonModalAbonare{
+  margin-right: 36%;
+  margin-top: 0.1%;
+}
+
+input[type="text"]{
+
+}
+#email{
+  border-radius: 10px;
+  border: 1px solid grey;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  margin-left: 15%;
+  padding: 0.8%;
+}
+input[type="checkbox"]{
+  cursor: pointer;
+}
+#policyCheck{
+    margin-left: 15%;
+}
+#policyLink{
+  font-weight: bold;
+  color: #134d7c;
+}
+
+#policyLink:hover{
+  text-decoration: underline;
+}
+
+#labelCheck{
+  cursor: pointer;
+  font-size: 0.8em;
+}
+#letter{
+  width: 6%;
+  position: absolute;
+  left: 39%;
+  top: 33%;
+}
+h5{
+  font-size: 0.9em;
+  font-weight: lighter;
+  padding-left: 15%;
+}
+#modal-abonare{
+  display: none;
+  padding-top: 13%;
+}
+
+#subButon{
+  width: 47%;
+  padding: 2%;
+  font-size: 0.8em;
+  display: block;
+  margin-left: 34%;
+  margin-top: 1.5%;
+}
+#subText{
+  font-size: 0.7em;
+  color: green;
+}
+.errorText{
+  color: #d60c0c;
+  font-size: 0.8em;
+  margin-left: 15%;
+}
+
+/***********  FONTS **********/
+
+@font-face{
+  font-family:space;
+  src: url("fonts/A-Space Light Demo.otf");
+}
+
+@font-face{
+  font-family:blankspace;
+  src: url("fonts/KGBlankSpaceSolid.ttf");
+}
+
+@font-face{
+  font-family:louisCafe;
+  src: url("fonts/Louis George Cafe.ttf");
+}
+
+/*********** MEDIA QUERY ***************/
+
+@media screen and (max-width: 770px) {
+
+  #meniuMic{
+    display: inline-block;
+    width: 3%;
+    padding: 1%;
+    background-color:#9ecef7;
+    color: white;
+    border: 1px solid #91c1ea;
+    cursor: pointer;
+    vertical-align:top;
+  }
+
+  .meniu_dropdown{
+    font-size: 0.8em;
+    margin: 0;
+    border: 1px solid #91c1ea;
+    background-color: #dbe6ff;
+    padding: 0;
+    text-align: left;
+    width: 30.2%;
+  }
+
+  .item{
+    padding: 10px;
+    width: auto;
+
+  }
+
+
+
+}
