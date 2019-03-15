@@ -62,7 +62,7 @@ h4{
     left:40px;
 }
 
-#viz{
+#last-vis{
   font-size: 0.8em;
   font-family: Georgia;
   position: absolute;
@@ -681,7 +681,7 @@ h5{
 
 @media screen and (max-width: 680px) {
 
-  #viz{
+  #last-vis{
     visibility: hidden;
   }
 

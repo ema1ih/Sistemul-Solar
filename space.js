@@ -89,8 +89,12 @@ window.onload = function()
 {
     modalAbonare.style.display = "block";
 
+    if(localStorage.getItem("day") != null)
+        {
+          document.getElementById("last-vis").innerHTML = "Ultima vizită: " + localStorage.getItem("day") + "/" + localStorage.getItem("month") + "/" + localStorage.getItem("year");
+        }
+
     var d = new Date();
-    document.getElementById("last-vis").innerHTML = localStorage.getItem("day") + "/" + localStorage.getItem("month") + "/" + localStorage.getItem("year");
     localStorage.setItem("day",d.getDate());
     localStorage.setItem("month",d.getMonth() + 1);
     localStorage.setItem("year",d.getFullYear());
