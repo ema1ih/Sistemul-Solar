@@ -1,71 +1,190 @@
 body{
-  margin: 0;
+  margin: 0%;
   background-color: #f2f8ff;
 }
+
 #cuprins{
   font-family: Georgia;
-  margin: 5% 10% 3% 10%;
+  margin: 8% 10% 3% 10%;
   text-align: justify;
   color: #165182;
 }
+
 h1{
   color: #22649b;
   font-family:  space;
   text-align: center;
-  font-size: 4em;
+  font-size: 3.5vw;
   letter-spacing: 2px;
 }
 
 header{
     background-color: #cee8ff;
     padding: 5%;
-    border: 1px solid #8bc4f4;
+    padding-top: 60px;
+    border-bottom: 1px solid #8bc4f4;
 }
-#bar{
-  font-weight: bold;
-  color: #22649b;
-  background-color: #eaf2ff;/*#afdaff;*/
-  width: 100%;
-  position: fixed;
-  z-index: 2;
-  border: 1px solid #8bc4f4;
-}
-#search-icon{
-  position: absolute;
-  top:15%;
-  right: 1%;
-  width: 1.3%;
-  cursor: pointer;
-}
-#space-icon{
-  width: 2%;
-}
-#search-bar{
-  width: 10%;
-  border-radius: 10px;
-  border: 1.3px solid grey;
-  position: absolute;
-  top:14%;
-  right: 3%;
-  margin-left: 84%;
-  padding: 0.3%;
-}
-#text-bar{
-    font-family: space;
-    font-size: 1.1em;
-    color: #22649b;
-    position: absolute; top:25%; left:2.5%;
-}
+
 nav{
   font-family: blankspace;
 }
 
 h4{
-  font-size: 1.8em;
+  font-size: 1.5em;
   color: #22649b;
   letter-spacing: 2px;
   font-family: blankspace;
 }
+
+/************* BARA DE SEARCH *******************/
+
+#bar{
+  font-weight: bold;
+  color: #22649b;
+  background-color: #eaf2ff;
+  width: 100%;
+  height: 35px;
+  position: fixed;
+  z-index: 2;
+  border: 1px solid #8bc4f4;
+}
+
+#space-icon{
+  height: 100%;
+}
+
+#text-bar{
+    font-family: space;
+    font-size: 1.1em;
+    color: #22649b;
+    position: absolute;
+    top:7px;
+    left:40px;
+}
+
+#viz{
+  font-size: 0.8em;
+  font-family: Georgia;
+  position: absolute;
+  right: 220px;
+  top: 9px;
+  color: #22649b;
+}
+
+#search-bar{
+  width: 150px;
+  border-radius: 10px;
+  border: 1.3px solid grey;
+  position: absolute;
+  top:3px;
+  right: 50px;
+  padding: 5px;
+}
+
+#search-icon{
+  position: absolute;
+  top:5px;
+  right: 20px;
+  width: 25px;
+  cursor: pointer;
+}
+
+/************* JOC INTERACTIV *******************/
+
+#cuprins-joc{
+  font-family: Georgia;
+  margin: 10% 10% 5% 10%;
+  text-align: center;
+  color: #165182;
+}
+
+#flex-container-planets{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around;
+  margin-top: 5%;
+  align-items: center;
+}
+
+#flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 5% 0% 5%;
+  align-items: center;
+}
+
+#verifica-sectie{
+  margin-bottom: 3%;
+  text-align: center;
+}
+
+.planet{
+  margin: 1%;
+  border: 1px solid #22649b;
+  width: 112px;
+  height: 150px;
+}
+
+#flex-container>#planet>img{
+  width: 120%;
+}
+
+.planet_wrong{
+  margin: 1%;
+  border: 3px solid #ed3d3d;
+  width: 112px;
+  height: 150px;
+}
+
+.planet_correct{
+  border: 3px solid #279153;
+}
+
+#sun{
+  border-radius: 50%;
+  margin-right: 2%;
+  margin-left: 0;
+}
+
+/*buton*/
+
+#verificaPlaneteButon{
+    width: 100px;
+    font-size: 0.5em;
+    padding: 10px;
+}
+
+
+/************* PLANETE EXTERIOARE ***************/
+
+#img_pluto{
+  width: 70%;
+  margin-left: 15%;
+}
+
+
+/************* PLANETE INTERIOARE **************/
+
+#img_transform{
+  transform: rotate(10deg);
+  width: 70%;
+  margin-left: 15%;
+  cursor: pointer;
+}
+#img_header{
+  width: 5%;
+  margin-left: 0%;
+  animation: move 50s infinite;
+}
+
+@keyframes move{
+  0% {margin-left: 0%; transform: rotate(0deg); }
+  50% {margin-left: 90%; transform: rotate(180deg); }
+  100% {margin-left: 0%; transform: rotate(360deg); }
+}
+
 /************* TABEL COMETE *****************/
 
 table{
@@ -74,8 +193,8 @@ table{
 td,th{
   border: 1px solid #5d98cc;
   text-align: left;
-  padding: 5px;
-  padding-right: 70px;
+  padding: 1%;
+  padding-right: 3%;
   background-color: #eff7ff;
 }
 th{
@@ -93,13 +212,13 @@ input[type=button]{
   cursor: pointer;
   border-radius: 10px;
 
-  transition-duration: 0.2s;
 }
 
 input[type=button]:hover{
   color: white;
   background-color: #8ac3f2;
 }
+
 #randomPlanet{
   padding: 0.5%;
 }
@@ -118,13 +237,30 @@ input[type=button]:hover{
 
 /************* QUIZ ****************/
 
+#cuprins-quiz{
+  font-family: Georgia;
+  margin: 130px 10% 3% 10%;
+  color: #165182;
+  font-size: 0.8em;
+}
+
+/*wiki link */
+
+#link{
+  cursor: pointer;
+}
+
+#link:hover{
+  color: #22649b;
+  font-weight: bold;
+}
+
 /*buton*/
 
 #verificaQuizButon{
-    width: 10%;
+    width: 150px;
     font-size: 1.2em;
     padding: 10px;
-
 }
 
 /*form*/
@@ -138,18 +274,16 @@ input[type="radio"]{
   visibility: hidden;
   z-index: -1;
 }
-#labelRadio{
+
+.labelRadio{
   position: relative;
   display: inline-block;
   cursor: pointer;
-
   margin-bottom: 10px;
   padding: 5px 30px 0px 30px;
-
 }
 
-#labelRadio::before{
-  content: " ";
+.cerc{
   position: absolute;
   border: 2px solid #6da6d6;
   width: 20px;
@@ -157,38 +291,66 @@ input[type="radio"]{
   display: block;
   border-radius: 18px;
   z-index: -1;
-
   left: 0;
   top: 3px;
 }
 
-input[type="radio"]:checked+#labelRadio{
+input[type="radio"]:checked+.labelRadio{
   color:white;
   padding-left:10px;
   padding-right: 10px;
 }
 
-input[type="radio"]:checked + #labelRadio:before{
+input[type="radio"]:checked+.labelRadio>.cerc{
   width: 96%;
   height: 76%;
-  background-color: #8ac3f2;
+  background-color: #8ac3f2; /*blue*/
+}
+
+.checkLabel{
+  width: 96%;
+  height: 76%;
+  border-radius: 15px;
+  color: white;
+}
+
+.correctLabel{
+  border: 2px solid #279153; /*green*/
+  background-color: #99d8b3 !important;
+}
+
+.wrongLabel{
+  border: 2px solid #7a2525; /*red*/
+  background-color: #ed3d3d !important;
 }
 
 /* Transition*/
-#labelRadio,
-#labelRadio::before {
-  transition: .10s all ease;
+.labelRadio,
+.cerc {
+  transition: .4s;
 }
+
 
 /************ MENIU DROPDOWN ************/
 
 #meniuMic{
   display: none;
 }
+
 a{
   text-decoration: none;
   color: white;
 }
+
+.meniu_dropdown{
+  display: block;
+  list-style-type: none;
+  font-size: 1vw;
+  margin: auto;
+  position: absolute;
+  right: 15%;
+}
+
 .dropdown_content{ /*meniul din drop down */
   display: none;
   z-index: 1;
@@ -205,20 +367,7 @@ a{
 
 
 ul>li:hover >ul{
-  /*visibility: visible;*/
   display: block;
-}
-
-.meniu_dropdown{
-  display: block;
-  list-style-type: none;
-  display: inline-block;
-  font-size: 1.2em;
-  width: 85%;
-  text-align: right;
-  margin-left: 1%;
-  margin-top: 0%;
-  position: absolute;
 }
 
 nav>ul>li{
@@ -238,15 +387,18 @@ nav>ul>li>ul>li:hover{
 ul>li:nth-child(even){
   background-color:#9ecef7;
 }
+
 ul>li:nth-child(odd){
   background-color:#afdaff;
 }
+
 .item{
   color: white;
   border: 1px solid #91c1ea;
   padding: 20px;
-  font-size: 1.1em;
+  font-size: 1.1vw;
 }
+
 .item:hover{
   background-color: #85bcea;
 }
@@ -255,7 +407,7 @@ ul>li:nth-child(odd){
 /********** GALERIE ************/
 
 #galerie{
-  margin-left: 8%;
+  margin-left: 6%;
   margin-bottom: 5%;
 }
 
@@ -264,14 +416,15 @@ figure{
   width: 100%;
   background-color: #dbeeff;
 }
+
 .poza_dreapta{
     width: 20%;
     padding: 1%;
     float: right;
     margin: 1%;
     border-radius: 10px;
-
 }
+
 .img_dr{
   width: 100%;
   border: 1px solid #a2d1f9;
@@ -309,7 +462,7 @@ figcaption{
   position: fixed;
   width: 100%;
   height: 100%;
-  padding-top: 5%;
+  padding-top: 2%;
   overflow: auto;
 }
 
@@ -326,11 +479,16 @@ figcaption{
   background-color: #dbeeff;
   margin: auto;
   border-radius: 10px;
-
 }
 
+#poza_pluto{
+  width: 50%;
+  margin-left: 25%;
+
+}
 #poza{
-  width: 100%;
+  width: 94%;
+  margin: 3%;
   border-radius: 7px;
   border: 1px solid #a2d1f9;
 }
@@ -354,33 +512,30 @@ figcaption{
   font-weight: bold;
 }
 
-/************* ABONARE **************/
 
+/************* ABONARE **************/
 
 #modal-content-abonare{
   display: block;
   border:3px solid #5d98cc;
   padding: 2%;
-  padding-top: 3%;
+  padding-top: 0%;
   background-color: #e5f2ff;
   margin: auto;
-
+  position: relative;
   text-align: center;
-  width: 26%;
-  height: 33%;
+  width: 400px;
+  height: 250px;
   color: #12548c;
-  font-size: 1.1em;
+  font-size: 0.8em;
   border-radius: 10px;
 }
 
 #closeButtonModalAbonare{
-  margin-right: 36%;
-  margin-top: 0.1%;
+  margin-right: 0%;
+  margin-top: 0%;
 }
 
-input[type="text"]{
-
-}
 #email{
   border-radius: 10px;
   border: 1px solid grey;
@@ -388,12 +543,15 @@ input[type="text"]{
   margin-left: 15%;
   padding: 0.8%;
 }
+
 input[type="checkbox"]{
   cursor: pointer;
 }
+
 #policyCheck{
     margin-left: 15%;
 }
+
 #policyLink{
   font-weight: bold;
   color: #134d7c;
@@ -407,17 +565,20 @@ input[type="checkbox"]{
   cursor: pointer;
   font-size: 0.8em;
 }
+
 #letter{
-  width: 6%;
+  width: 90px;
   position: absolute;
-  left: 39%;
-  top: 33%;
+  left: 10%;
+  top: 30%;
 }
+
 h5{
   font-size: 0.9em;
   font-weight: lighter;
   padding-left: 15%;
 }
+
 #modal-abonare{
   display: none;
   padding-top: 13%;
@@ -431,15 +592,18 @@ h5{
   margin-left: 34%;
   margin-top: 1.5%;
 }
+
 #subText{
   font-size: 0.7em;
   color: green;
 }
+
 .errorText{
   color: #d60c0c;
   font-size: 0.8em;
   margin-left: 15%;
 }
+
 
 /***********  FONTS **********/
 
@@ -458,13 +622,98 @@ h5{
   src: url("fonts/Louis George Cafe.ttf");
 }
 
+
 /*********** MEDIA QUERY ***************/
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 1250px) {
+
+  .meniu_dropdown{
+    right: 10%;
+  }
+
+  #modal-content{
+    width: 60%;
+  }
+
+  .modal{
+      padding-top: 4%;
+  }
+
+  .closeButton{
+    margin-right: 20%;
+  }
+
+}
+
+@media screen and (max-width: 850px) {
+
+  .meniu_dropdown{
+    right: 1%;
+  }
+
+  #galerie{
+    margin-left: 2%;
+    margin-bottom: 5%;
+  }
+
+  #modal-content{
+    width: 80%;
+  }
+
+  .modal{
+      padding-top: 6%;
+  }
+
+  .closeButton{
+    margin-right: 10%;
+  }
+
+  h4{
+      font-size: 1.3em;
+  }
+
+  form{
+    margin-top: 40px;
+    font-size: 1em;
+  }
+
+}
+
+@media screen and (max-width: 680px) {
+
+  #viz{
+    visibility: hidden;
+  }
+
+  h4{
+    font-size: 1em;
+  }
+
+  .poza_dreapta{
+      width: 93%;
+      float:none;
+      padding: 3%;
+  }
+
+  .figBox{
+    width: 40%;
+  }
+
+  #modal-content{
+    width: 95%;
+  }
+
+  .modal{
+      padding-top: 15%;
+  }
+
+  .closeButton{
+    margin-right: 5%;
+  }
 
   #meniuMic{
     display: inline-block;
-    width: 3%;
+    width: 5%;
     padding: 1%;
     background-color:#9ecef7;
     color: white;
@@ -474,21 +723,25 @@ h5{
   }
 
   .meniu_dropdown{
+    display: none;
+    left: 0;
     font-size: 0.8em;
     margin: 0;
-    border: 1px solid #91c1ea;
-    background-color: #dbe6ff;
+    background-color: rgba(0,0,0,0);
     padding: 0;
     text-align: left;
-    width: 30.2%;
+    width: 36%;
   }
 
   .item{
+    border: 2px solid #91c1ea;
+    font-size: 1.2em;
     padding: 10px;
     width: auto;
-
   }
 
-
+  #cuprins-quiz{
+    margin-top: 50px;
+  }
 
 }

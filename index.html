@@ -1,55 +1,68 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
+  <meta name="keywords" content="sistem,solar,spatiu">
   <link rel="icon" href="pics/page-icon.png">
   <link rel="stylesheet" type="text/css" href="space.css">
-  <script src="space.js" defer> </script>
+  <script src="space.js" defer> </script> 
+  <script src="findOnPageJS.js" defer> </script>
   <title> Sistemul solar </title>
 </head>
 
 <body>
 
-  <div id="bar">
-    <a href="space.html">
-      <img class="icon" id="space-icon" src="pics/system-icon.png">
-      <span id="text-bar"> Sistemul Solar </span>
-    </a>
-    <input id="search-bar" type="text" placeholder="Search">
-    <img id="search-icon" src="pics/search-icon.png">
-  </div>
 
-  <header>
-    <h1> Sistemul solar </h1>
-  </header>
+    <!--************** BARA DE SEARCH **************-->
+
+    <div id="bar">
+      <a href="index.html">
+        <img id="space-icon" src="pics/system-icon.png">
+        <div id="text-bar"> Sistemul Solar </div>
+      </a>
+      <div id="viz"> Ultima vizită:  <span id="last-vis"> </span> </div>
+      <input id="search-bar" type="text" placeholder="Search">
+      <img id="search-icon" src="pics/search-icon.png">
+    </div>
+
+    <!--************** HEADER **************-->
+
+    <header>
+      <h1> Sistemul solar </h1>
+    </header>
+
+
+    <!--************** MENIUL DROPDOWN **************-->
 
     <nav>
-    <span id="meniuMic"> >> </span>
-    <ul class="meniu_dropdown">
-    	<li> <div class="item"> Planete interioare <!--&#8623;--> </div>
-    		<ul class="dropdown_content">
-    			<li>Mercur
-    			<li>Venus
-          <li>Pământ
-          <li>Marte
-    		</ul>
-    	<li> <div class="item"> Planete exterioare</div>
-    		<ul class="dropdown_content">
-    			<li>Jupiter
-    			<li>Saturn
-          <li>Uranus
-          <li>Neptun
-    		</ul>
-    	<li> <div class="item"> <a href="comete.html" target="_blank"> Comete </a> </div>
-    	<li> <div class="item"> Regiunea transneptuniană </div>
-    		<ul class="dropdown_content">
-    			<li>Pluto și Charon
-    			<li>Makemake și Haumea
-    		</ul>
-    	<li> <div class="item"> Regiuni mai îndepărtate </div>
-      <li> <div class="item"> <a href="quiz.html" target="_blank"> QUIZ </a> </div>
-    </ul>
+      <span id="meniuMic"> >> </span>
+      <ul class="meniu_dropdown">
+      	<li> <div class="item"> <a href="planeteInterioare.html"> Planete interioare </a> </div>
+      		<ul class="dropdown_content">
+      			<li>Mercur
+      			<li>Venus
+            <li>Pământ
+            <li>Marte
+      		</ul>
+        <li> <div class="item"> <a href="planeteExterioare.html"> Planete exterioare </a> </div>
+      		<ul class="dropdown_content">
+      			<li>Jupiter
+      			<li>Saturn
+            <li>Uranus
+            <li>Neptun
+      		</ul>
+      	<li> <div class="item"> <a href="comete.html"> Comete </a> </div>
+        <li> <div class="item"> <a href="regiuneaTransneptuniană.html"> Regiunea transneptuniană </a> </div>
+      		<ul class="dropdown_content">
+      			<li>Pluto și Charon
+      			<li>Makemake și Haumea
+      		</ul>
+      	<li> <div class="item"> <a href="joc.html"> Joc interactiv </a> </div>
+        <li> <div class="item"> <a href="quiz.html"> QUIZ </a> </div>
+      </ul>
     </nav>
 
+
+    <!--************** MODAL GALERIE & ABONARE **************-->
 
     <section>
 
@@ -62,41 +75,39 @@
 
 
       <div class="modal" id="modal-abonare">
-        <span class="closeButton" id="closeButtonModalAbonare"> CLOSE </span>
+
         <div id="modal-content-abonare">
 
+          <span class="closeButton" id="closeButtonModalAbonare"> CLOSE </span>
+          <br>
           <h2> <b> Vrei să fii la curent cu toate noutățile? </b> </h2>
 
           <div id="abonare-content">
-          <h5> Abonează-te la newsletter-ul nostru. </h5>
+            <h5> Abonează-te la newsletter-ul nostru. </h5>
+            <img id="letter" src="pics/mail2.png">
 
-          <img id="letter" src="pics/mail2.png">
-
-          <form>
-              <input type="text" id="email" placeholder="Email-ul tău"> <br>
-
-              <span class="errorText" id="emailErrorText" > </span> <br>
-
-              <input id="policyCheck" type="checkbox"> <label id="labelCheck" for="policyCheck"> Accept <a href="policy.html" target="_blank" id="policyLink"> Politica de confidențialitate</a>. </label>
-
-              <br>
-
-              <span class="errorText" id="policyErrorText">  </span>
-
-              <span id="subText">  </span>
-
-              <input id="subButon" type="button" value="Vreau să mă abonez">
-          </form>
+            <form>
+                <input type="text" id="email" placeholder="Email-ul tău"> <br>
+                <span class="errorText" id="emailErrorText" > </span> <br>
+                <input id="policyCheck" type="checkbox">
+                  <label id="labelCheck" for="policyCheck"> Accept <a href="policy.html" target="_blank" id="policyLink"> Politica de confidențialitate</a>. </label>
+                <br>
+                <span class="errorText" id="policyErrorText">  </span>
+                <span id="subText">  </span>
+                <input id="subButon" type="button" value="Vreau să mă abonez">
+            </form>
+          </div>
 
         </div>
+
       </div>
 
     </section>
 
 
+  <!--************** CUPRINS **************-->
   <section id="cuprins">
 
-    <br>
     <article id="descriere">
       <p>
         &emsp;&emsp; Sistemul solar este format din Soare împreună cu sistemul său planetar (care cuprinde opt planete împreună cu sateliții lor naturali) și alte obiecte non-stelare.
@@ -111,31 +122,28 @@
         <figcaption>Planetele sistemului solar reprezentate la scară: <b>Jupiter</b> și <b>Saturn</b> (rândul de sus), <b>Uranus</b> și <b>Neptun</b> (mijloc), <b>Pământul</b> și <b>Venus</b> (jos mijloc), <b>Marte</b> și <b>Mercur</b> jos.</figcaption>
     </figure>
 
-
     <article id="descoperire">
       <h4> Descoperire și explorare </h4>
       <p>
-        &emsp;&emsp; Timp de câteva mii de ani umanitatea, cu puține excepții, nu a recunoscut existența sistemului solar. Oamenii credeau că Pământul se află în centrul Universului și este cu totul diferit de celelalte obiecte divine și eterice care se mișcă pe cer. Deși filozoful grec Aristarh din Samos a speculat despre reorganizarea heliocentrică a cosmosului,[15] Nicolaus Copernicus a fost primul astronom care a dezvoltat un sistem matematic heliocentric predictiv.[16] Succesorii săi din secolul al XVII-lea (Galileo Galilei, Johannes Kepler și Isaac Newton) au avut o înțelegere a fizicii care i-a condus la admiterea graduală a ideii că Pământul se rotește de fapt în jurul Soarelui și că celelalte planete sunt guvernate de aceleași legi ale fizicii care guvernează și Pământul. În plus, inventarea telescopului a condus la descoperirea unor planete și sateliți noi. În timpurile mai recente, îmbunătățiri ale telescoapelor și folosirea navelor spațiale fără echipaj au deschis drumul studierii fenomenelor geologice din sistemul solar (studiul munților și craterelor de impact) și a fenomenelor meteorologice sezoniere de pe unele planete (cum ar fi norii, furtunile de nisip și calotele de gheață).
+        &emsp;&emsp; Timp de câteva mii de ani umanitatea, cu puține excepții, nu a recunoscut existența sistemului solar. Oamenii credeau că Pământul se află în centrul Universului și este cu totul diferit de celelalte obiecte divine și eterice care se mișcă pe cer. Deși filozoful grec Aristarh din Samos a speculat despre reorganizarea heliocentrică a cosmosului, Nicolaus Copernicus a fost primul astronom care a dezvoltat un sistem matematic heliocentric predictiv. Succesorii săi din secolul al XVII-lea (Galileo Galilei, Johannes Kepler și Isaac Newton) au avut o înțelegere a fizicii care i-a condus la admiterea graduală a ideii că Pământul se rotește de fapt în jurul Soarelui și că celelalte planete sunt guvernate de aceleași legi ale fizicii care guvernează și Pământul. În plus, inventarea telescopului a condus la descoperirea unor planete și sateliți noi. În timpurile mai recente, îmbunătățiri ale telescoapelor și folosirea navelor spațiale fără echipaj au deschis drumul studierii fenomenelor geologice din sistemul solar (studiul munților și craterelor de impact) și a fenomenelor meteorologice sezoniere de pe unele planete (cum ar fi norii, furtunile de nisip și calotele de gheață).
       </p>
     </article>
-
 
     <article id="geneza">
       <h4> Geneză și evolutie </h4>
       <p>
-          &emsp;&emsp;Sistemul solar s-a format acum 4,568 miliarde de ani, în urma colapsului gravitațional al unei regiuni din cadrul unui vast nor molecular.[41] Acest nor inițial avea un diametru de mai mulți ani-lumină și a dat naștere, probabil, mai multor stele.[42] La fel ca și majoritatea norilor moleculari, acesta era constituit, în principal, din hidrogen, mai puțin heliu și cantități mici de elemente mai grele formate în generațiile anterioare de stele. Când regiunea care avea să devină sistemul solar, denumită și nebuloasă pre-solară,[43] a suferit un colaps, conservarea momentului cinetic a determinat-o să se rotească mai repede. Centrul, unde s-a concentrat cea mai mare parte a masei, a devenit din ce în ce mai fierbinte în raport cu discul din jur.[42] Nebuloasa în contracție, rotindu-se tot mai repede, a început să se aplatizeze și a luat forma unui disc protoplanetar cu un diametru de aproximativ 200 UA,[42] având o protostea fierbinte și densă în centru.[44][45] Protoplanetele formate în urma acreției din acest disc de praf și gaz[46] interacționau gravitațional, formând - prin contopire - corpuri din ce în ce mai mari. Sute de protoplanete au putut exista în sistemul solar timpuriu, dar acestea fie au fuzionat, fie au fost distruse, formând planete și planete pitice, iar resturile devenind obiecte minore.
+          &emsp;&emsp;Sistemul solar s-a format acum 4,568 miliarde de ani, în urma colapsului gravitațional al unei regiuni din cadrul unui vast nor molecular. Acest nor inițial avea un diametru de mai mulți ani-lumină și a dat naștere, probabil, mai multor stele. La fel ca și majoritatea norilor moleculari, acesta era constituit, în principal, din hidrogen, mai puțin heliu și cantități mici de elemente mai grele formate în generațiile anterioare de stele. Când regiunea care avea să devină sistemul solar, denumită și nebuloasă pre-solară, a suferit un colaps, conservarea momentului cinetic a determinat-o să se rotească mai repede. Centrul, unde s-a concentrat cea mai mare parte a masei, a devenit din ce în ce mai fierbinte în raport cu discul din jur. Nebuloasa în contracție, rotindu-se tot mai repede, a început să se aplatizeze și a luat forma unui disc protoplanetar cu un diametru de aproximativ 200 UA, având o protostea fierbinte și densă în centru. Protoplanetele formate în urma acreției din acest disc de praf și gaz interacționau gravitațional, formând - prin contopire - corpuri din ce în ce mai mari. Sute de protoplanete au putut exista în sistemul solar timpuriu, dar acestea fie au fuzionat, fie au fost distruse, formând planete și planete pitice, iar resturile devenind obiecte minore.
       </p>
       <p>
           &emsp;&emsp;Din cauza punctului lor de fierbere foarte mare, numai metalele și silicații au putut rezista în sistemul solar interior fierbinte, aproape de Soare, iar acestea au format planetele de rocă Mercur, Venus, Terra și Marte. Deoarece elementele metalice constituiau doar o fracțiune foarte mică din nebuloasa solară, planetele terestre nu au putut deveni foarte mari. Giganții gazoși (Jupiter, Saturn, Uranus și Neptun) s-au format mai departe de Soare, dincolo de linia de îngheț: punctul dintre orbita lui Marte și a lui Jupiter începând de la care materia este suficient de rece pentru a permite compușilor volatili să rămână solizi. Ghețurile care formau aceste planete au fost mai numeroase decât metalele și silicații, care formau planetele terestre interioare, permițându-le să devină destul de masive pentru a capta atmosfere mari de hidrogen și heliu, elementele cele mai ușoare și mai abundente. Resturile care nu au devenit planete s-au concentrat în regiuni ca centura de asteroizi, centura Kuiper și norul lui Oort. Modelul de la Nisa este o explicație a creării acestor regiuni, precum și a modului în care planetele exterioare s-au putut forma în poziții diferite și au migrat, ajungând să aibă orbitele lor actuale prin diverse interacțiuni gravitaționale.
       </p>
       <p>
-          &emsp;&emsp;După 50 de milioane de ani, presiunea și densitatea hidrogenului din centrul protostelei au devenit suficient de mari pentru ca să înceapă fuziunea termonucleară.[47] Temperatura, viteza de reacție, presiunea, precum și densitatea au crescut până când a fost atins echilibrul hidrostatic: presiunea termică a egalat forța gravitațională. În acel moment, Soarele a devenit o stea din secvența principală de stele.[48] Vântul solar a creat heliosfera și a măturat gazul și praful rămase din discul protoplanetar în spațiul interstelar, punând capăt procesului de formare a planetelor.
+          &emsp;&emsp;După 50 de milioane de ani, presiunea și densitatea hidrogenului din centrul protostelei au devenit suficient de mari pentru ca să înceapă fuziunea termonucleară. Temperatura, viteza de reacție, presiunea, precum și densitatea au crescut până când a fost atins echilibrul hidrostatic: presiunea termică a egalat forța gravitațională. În acel moment, Soarele a devenit o stea din secvența principală de stele. Vântul solar a creat heliosfera și a măturat gazul și praful rămase din discul protoplanetar în spațiul interstelar, punând capăt procesului de formare a planetelor.
       </p>
       <p>
-          &emsp;&emsp;Sistemul solar va rămâne aproximativ așa cum îl știm astăzi până când hidrogenul din nucleul Soarelui va fi complet transformat în heliu, eveniment ce va avea loc peste 5,4 miliarde de ani. Acest lucru va pune sfârșit perioadei principale de viață a Soarelui. În acel moment, nucleul Soarelui va suferi un colaps, iar energia produsă va fi mult mai mare decât în prezent. Straturile exterioare ale Soarelui se vor extinde, diametrul ajungând de circa 260 de ori mai mare decât în momentul actual și Soarele va deveni o gigantă roșie. Din cauza faptului că suprafața sa va crește foarte mult, ea va fi considerabil mai rece decât va fi fost în perioada principală a vieții lui (cu maximum 2600 K).[49] În urma măririi Soarelui, Mercur și Venus se vor vaporiza iar planeta Pământ va deveni nelocuibilă, zona locuibilă mutându-se la orbita lui Marte. În cele din urmă, nucleul nu va mai fi suficient de fierbinte pentru fuziunea heliului; Soarele va arde heliul pentru o fracțiune a timpului în care a ars hidrogenul din nucleu. Soarele nu este destul de masiv pentru a începe fuziunea elementelor mai grele, și reacțiile nucleare din nucleu vor scădea. Straturile sale exterioare vor fi ejectate în spațiu, lăsând în urmă o pitică albă, un obiect extraordinar de dens, având jumătate din masa inițială a Soarelui (de mărimea Pământului).[50] Straturile exterioare ejectate vor forma ceea ce este cunoscut sub numele de nebuloasă planetară, împrăștiind în mediul interstelar unele din materialele din care s-a format Soarele, dar și elemente mai grele, cum ar fi carbonul, create în Soare.
+          &emsp;&emsp;Sistemul solar va rămâne aproximativ așa cum îl știm astăzi până când hidrogenul din nucleul Soarelui va fi complet transformat în heliu, eveniment ce va avea loc peste 5,4 miliarde de ani. Acest lucru va pune sfârșit perioadei principale de viață a Soarelui. În acel moment, nucleul Soarelui va suferi un colaps, iar energia produsă va fi mult mai mare decât în prezent. Straturile exterioare ale Soarelui se vor extinde, diametrul ajungând de circa 260 de ori mai mare decât în momentul actual și Soarele va deveni o gigantă roșie. Din cauza faptului că suprafața sa va crește foarte mult, ea va fi considerabil mai rece decât va fi fost în perioada principală a vieții lui (cu maximum 2600 K). În urma măririi Soarelui, Mercur și Venus se vor vaporiza iar planeta Pământ va deveni nelocuibilă, zona locuibilă mutându-se la orbita lui Marte. În cele din urmă, nucleul nu va mai fi suficient de fierbinte pentru fuziunea heliului; Soarele va arde heliul pentru o fracțiune a timpului în care a ars hidrogenul din nucleu. Soarele nu este destul de masiv pentru a începe fuziunea elementelor mai grele, și reacțiile nucleare din nucleu vor scădea. Straturile sale exterioare vor fi ejectate în spațiu, lăsând în urmă o pitică albă, un obiect extraordinar de dens, având jumătate din masa inițială a Soarelui (de mărimea Pământului). Straturile exterioare ejectate vor forma ceea ce este cunoscut sub numele de nebuloasă planetară, împrăștiind în mediul interstelar unele din materialele din care s-a format Soarele, dar și elemente mai grele, cum ar fi carbonul, create în Soare.
       </p>
     </article>
-
 
     <article id="soare">
       <figure class="poza_dreapta">
@@ -157,15 +165,13 @@
         </p>
     </article>
 
-
-
     <article id="galaxia">
       <h4> Contextul galactic </h4>
       <p>
-        &emsp;&emsp;Sistemul solar este localizat în galaxia Calea Lactee, o galaxie spiralată cu un diametru de aproximativ 100 000 de ani-lumină, ce conține în total circa 200 de miliarde de stele.[131] Ca localizare generală, Soarele se află în cadrul uneia dintre brațele (sau spiralele) exterioare ale Căii Lactee, cunoscut ca Brațul Orion, sau „Pintenul Local”.[132] Soarele se află la aproximativ 25 000 și 28 000 de ani lumină distanță de Centrul Galactic,[133] iar viteza sa în raport cu galaxia este de aproximativ 220 de kilometri pe secundă, astfel completează o revoluție galactică odată la 225-250 de milioane de ani. Această revoluție este cunoscută în limbajul științific ca an galactic al sistemului solar.[134] Apexul solar, punctul spre care Soarele se deplasează în mișcarea lui prin Calea Lactee, se află în apropierea stelei strălucitoare Vega, dar la zona mărginașă dintre constelațiile Lira și Hercule.[135] Planul eclipticei se află la un unghi de aproximativ 60° față de planul galactic.[f]
+        &emsp;&emsp;Sistemul solar este localizat în galaxia Calea Lactee, o galaxie spiralată cu un diametru de aproximativ 100 000 de ani-lumină, ce conține în total circa 200 de miliarde de stele. Ca localizare generală, Soarele se află în cadrul uneia dintre brațele (sau spiralele) exterioare ale Căii Lactee, cunoscut ca Brațul Orion, sau „Pintenul Local”. Soarele se află la aproximativ 25 000 și 28 000 de ani lumină distanță de Centrul Galactic, iar viteza sa în raport cu galaxia este de aproximativ 220 de kilometri pe secundă, astfel completează o revoluție galactică odată la 225-250 de milioane de ani. Această revoluție este cunoscută în limbajul științific ca an galactic al sistemului solar. Apexul solar, punctul spre care Soarele se deplasează în mișcarea lui prin Calea Lactee, se află în apropierea stelei strălucitoare Vega, dar la zona mărginașă dintre constelațiile Lira și Hercule. Planul eclipticei se află la un unghi de aproximativ 60° față de planul galactic.
       </p>
       <p>
-        &emsp;&emsp;Localizarea sistemului solar în galaxie este factorul care a determinat evoluția vieții pe Pământ. Orbita sa este aproape circulară, și vitezele orbitale din apropierea Soarelui sunt aproape la fel de rapide ca și cele ale brațelor spirale. Prin urmare, Soarele tranzitează brațele galaxiei foarte rar. Deoarece în zona orbitală a Soarelui (adică în zona brațelor spirale) există mai puține supernove, instabilități gravitaționale și radiații care ar putea distruge sistemul solar, astfel Pământul a avut lungi perioade de stabilitate în care viața a putut să prospere.[137] De asemenea, sistemul solar se află poziționat cu mult în afara zonelor foarte aglomerate cu stele ale centrului galactic. În apropierea centrului, forțele gravitaționale venite de la alte stele ar putea smulge obiectele afla în Norul lui Oort și să trimită multe comete înspre sistemul solar interior, producând coliziune cu probabile implicații catastrofale pentru viața de pe Pământ. Radiațiile intense ale centrului galactic ar putea, de asemenea, să perturbe evoluția formelor de viață complexe.[137] Chiar și pentru localizarea curentă a sistemului solar, unii savanți au presupus ca acum 35 000 de ani, unele supernove să fi afectat negativ viața de pe Pământ, prin aruncarea unor fragmente de nucleu stelar spre Soare sub forma unor fire de praf radioactive și chiar obiecte mai mari, asemănătoare cometelor.[138]
+        &emsp;&emsp;Localizarea sistemului solar în galaxie este factorul care a determinat evoluția vieții pe Pământ. Orbita sa este aproape circulară, și vitezele orbitale din apropierea Soarelui sunt aproape la fel de rapide ca și cele ale brațelor spirale. Prin urmare, Soarele tranzitează brațele galaxiei foarte rar. Deoarece în zona orbitală a Soarelui (adică în zona brațelor spirale) există mai puține supernove, instabilități gravitaționale și radiații care ar putea distruge sistemul solar, astfel Pământul a avut lungi perioade de stabilitate în care viața a putut să prospere. De asemenea, sistemul solar se află poziționat cu mult în afara zonelor foarte aglomerate cu stele ale centrului galactic. În apropierea centrului, forțele gravitaționale venite de la alte stele ar putea smulge obiectele afla în Norul lui Oort și să trimită multe comete înspre sistemul solar interior, producând coliziune cu probabile implicații catastrofale pentru viața de pe Pământ. Radiațiile intense ale centrului galactic ar putea, de asemenea, să perturbe evoluția formelor de viață complexe. Chiar și pentru localizarea curentă a sistemului solar, unii savanți au presupus ca acum 35 000 de ani, unele supernove să fi afectat negativ viața de pe Pământ, prin aruncarea unor fragmente de nucleu stelar spre Soare sub forma unor fire de praf radioactive și chiar obiecte mai mari, asemănătoare cometelor.
       </p>
       <p>
         &emsp;&emsp;În imediata vecinătate galactică a sistemului solar se află Norul Local Interstelar, un nor astronomic dens dintr-o altă regiune împrăștiată cunoscută ca Bula Locală, o cavitate în formă de clepsidră din mediul interstelar de cel puțin 300 de ani lumină în lungime. Bula este saturată cu plasmă de temperatură înaltă ceea ce sugerează că a fost produsă recent de unele supernove.
@@ -174,77 +180,77 @@
 
   </section>
 
-
+  <!--************** GALERIE **************-->
 
   <section id="galerie">
 
     <div class="figBox">
       <figure>
-        <img  class="img" src="pics/1.jpg"  width="25%">
+        <img  class="img" src="pics/1.jpg">
         <figcaption> <b> EARTH </b> </figcaption>
       </figure>
     </div>
 
     <div class="figBox">
       <figure>
-        <img class="img" src="pics/2.jpg"  width="25%">
+        <img class="img" src="pics/2.jpg">
         <figcaption> <b> SOLAR SYSTEM </b>  </figcaption>
       </figure>
     </div>
 
     <div class="figBox">
       <figure>
-        <img class="img" src="pics/3.jpg"  width="25%">
+        <img class="img" src="pics/3.jpg">
         <figcaption> <b> INTERSTELLAR NEIGHBORHOOD </b> </figcaption>
       </figure>
     </div>
 
     <div class="figBox">
       <figure>
-        <img class="img" src="pics/4.jpg"  width="25%">
+        <img class="img" src="pics/4.jpg">
         <figcaption> <b> MILKY WAY GALAXY </b> </figcaption>
       </figure>
     </div>
 
     <div class="figBox">
       <figure>
-        <img class="img" src="pics/5.jpg"  width="25%">
+        <img class="img" src="pics/5.jpg">
         <figcaption> <b> LOCAL GALACTIC GROUP </b> </figcaption>
       </figure>
     </div>
 
     <div class="figBox">
       <figure>
-        <img class="img" src="pics/6.jpg"  width="25%">
+        <img class="img" src="pics/6.jpg">
         <figcaption> <b> VIRGO SUPERCLUSTERS </b> </figcaption>
       </figure>
     </div>
 
     <div class="figBox">
       <figure>
-        <img class="img" src="pics/7.jpg"  width="25%">
+        <img class="img" src="pics/7.jpg">
         <figcaption> <b> LOCAL SUPERCLUSTERS </b> </figcaption>
       </figure>
     </div>
 
     <div class="figBox">
         <figure>
-          <img class="img" src="pics/8.jpg"  width="25%">
+          <img class="img" src="pics/8.jpg">
           <figcaption> <b> OBSERVABLE UNVERSE </b> </figcaption>
         </figure>
      </div>
 
   </section>
 
+  <!--************** CORPURI RANDOM **************-->
+
   <section id="corpuri">
 
     <input id="randomPlanet" type="button" value="Descoperă noi corpuri cerești">
+    <h4 style = "font-size : 0.6em"> Click pe un corp pentru a-l șterge. </h4>
     <p id="planets"> </p>
 
   </section>
 
-
-
 </body>
-
 </html>

@@ -1,170 +1,234 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="icon" href="pics/page-icon.png">
   <link rel="stylesheet" type="text/css" href="space.css">
   <script src="quiz.js" defer> </script>
+  <script src="findOnPageJS.js" defer> </script>
+  <script src="meniuMic.js" defer> </script>
   <title> QUIZ </title>
 </head>
 
 <body>
 
+  <!--************** BARA DE SEARCH **************-->
+
+  <div id="bar">
+    <a href="index.html">
+      <img id="space-icon" src="pics/system-icon.png">
+      <div id="text-bar"> Sistemul Solar </div>
+    </a>
+    <input id="search-bar" type="text" placeholder="Search">
+    <img id="search-icon" src="pics/search-icon.png">
+  </div>
+
+  <!--************** HEADER **************-->
+
   <header>
     <h1> QUIZ </h1>
   </header>
 
-    <nav>
+
+  <!--************** MENIUL DROPDOWN **************-->
+
+  <nav>
+    <span id="meniuMic"> >> </span>
     <ul class="meniu_dropdown">
-    	<li> <div class="item"> Planete interioare <!--&#8623;--> </div>
-    		<ul class="dropdown_content">
-    			<li>Mercur
-    			<li>Venus
+      <li> <div class="item"> <a href="planeteInterioare.html"> Planete interioare </a> </div>
+        <ul class="dropdown_content">
+          <li>Mercur
+          <li>Venus
           <li>Pământ
           <li>Marte
-    		</ul>
-    	<li> <div class="item"> Planete exterioare  </div>
-    		<ul class="dropdown_content">
-    			<li>Jupiter
-    			<li>Saturn
+        </ul>
+      <li> <div class="item"> <a href="planeteExterioare.html"> Planete exterioare </a> </div>
+        <ul class="dropdown_content">
+          <li>Jupiter
+          <li>Saturn
           <li>Uranus
           <li>Neptun
-    		</ul>
-    	<li> <div class="item"> <a href="comete.html" target="_blank"> Comete </a> </div>
-    	<li> <div class="item"> Regiunea transneptuniană </div>
-    		<ul class="dropdown_content">
-    			<li>Pluto și Charon
-    			<li>Makemake și Haumea
-    		</ul>
-    	<li> <div class="item"> Regiuni mai îndepărtate </div>
+        </ul>
+      <li> <div class="item"> <a href="comete.html"> Comete </a> </div>
+      <li> <div class="item"> <a href="regiuneaTransneptuniană.html"> Regiunea transneptuniană </a> </div>
+        <ul class="dropdown_content">
+          <li>Pluto și Charon
+          <li>Makemake și Haumea
+        </ul>
+      <li> <div class="item"> <a href="joc.html"> Joc interactiv </a> </div>
       <li> <div class="item"> <a href="quiz.html"> QUIZ </a> </div>
     </ul>
-    </nav>
+  </nav>
 
 
 
+  <!--************** CUPRINS **************-->
 
-  <section id="cuprins">
+  <section id="cuprins-quiz">
 
-    <br>
     <h4> 1. Pluto este: </h4>
     <form>
-          <input type="radio" name="pluto" id="radio_1.1" checked="checked"> <label id="labelRadio" for="radio_1.1"> o planetă inferioară </label> <br>
-          <input type="radio" name="pluto" id="radio_1.2">  <label id="labelRadio"  for="radio_1.2"> o planetă pitică </label> <br>
-          <input type="radio" name="pluto" id="radio_1.3"> <label id="labelRadio" for="radio_1.3"> a noua planetă a Sistemului Solar </label> <br>
-          <input type="radio" name="pluto" id="radio_1.4"> <label id="labelRadio"  for="radio_1.4"> un satelit natural </label> <br>
-          <input type="radio" name="pluto" id="radio_1.5"> <label id="labelRadio" for="radio_1.5"> o planetă extragalactică  </label> <br>
+          <input type="radio" name="pluto" id="radio_1.1" checked="checked">
+              <label class = "labelRadio" for="radio_1.1"> <div class = "cerc"> </div> o planetă inferioară </label> <br>
+          <input type="radio" name="pluto" id="radio_1.2">
+              <label class = "labelRadio"  for="radio_1.2"> <div class = "cerc"> </div> o planetă pitică </label> <br>
+          <input type="radio" name="pluto" id="radio_1.3">
+              <label class = "labelRadio" for="radio_1.3"> <div class = "cerc"> </div> a noua planetă a Sistemului Solar </label> <br>
+          <input type="radio" name="pluto" id="radio_1.4">
+              <label class = "labelRadio"  for="radio_1.4"> <div class = "cerc"> </div> un satelit natural </label> <br>
+          <input type="radio" name="pluto" id="radio_1.5">
+              <label class = "labelRadio" for="radio_1.5"> <div class = "cerc"> </div> o planetă extragalactică  </label> <br>
     </form>
 
+    <h4> 2. Planeta din poza alăturată este: </h4>
     <aside>
       <figure class="poza_dreapta">
           <img class="img_dr" src="pics/venus.jpg">
      </figure>
    </aside>
-
-    <h4> 2. Planeta din poza alăturată este: </h4>
     <form>
-        <input type="radio" name="venus" id="radio_2.1" checked="checked"> <label    id="labelRadio" for="radio_2.1"> Venus </label> <br>
-        <input type="radio" name="venus" id="radio_2.2"> <label id="labelRadio" for="radio_2.2"> Mercur </label> <br>
-        <input type="radio" name="venus" id="radio_2.3"> <label id="labelRadio" for="radio_2.3"> Uranus </label> <br>
-        <input type="radio" name="venus" id="radio_2.4"> <label id="labelRadio" for="radio_2.4"> Marte </label> <br>
-        <input type="radio" name="venus" id="radio_2.5"> <label id="labelRadio" for="radio_2.5"> Jupiter </label> <br>
+        <input type="radio" name="venus" id="radio_2.1" checked="checked">
+            <label    class = "labelRadio" for="radio_2.1">  <div class = "cerc"> </div> Venus </label> <br>
+        <input type="radio" name="venus" id="radio_2.2">
+            <label class = "labelRadio" for="radio_2.2">  <div class = "cerc"> </div> Mercur </label> <br>
+        <input type="radio" name="venus" id="radio_2.3">
+            <label class = "labelRadio" for="radio_2.3">  <div class = "cerc"> </div> Uranus </label> <br>
+        <input type="radio" name="venus" id="radio_2.4">
+            <label class = "labelRadio" for="radio_2.4">  <div class = "cerc"> </div> Marte </label> <br>
+        <input type="radio" name="venus" id="radio_2.5">
+            <label class = "labelRadio" for="radio_2.5">  <div class = "cerc"> </div> Jupiter </label> <br>
     </form>
 
     <h4> 3. Cometa Halley e vizibilă de pe Pământ la fiecare: </h4>
     <form>
-        <input type="radio" name="cometa" id="radio_3.1" checked="checked"> <label id="labelRadio" for="radio_3.1"> 4-5 ani </label> <br>
-        <input type="radio" name="cometa" id="radio_3.2"> <label id="labelRadio" for="radio_3.2"> 22-23 de ani</label><br>
-        <input type="radio" name="cometa" id="radio_3.3"> <label   id="labelRadio" for="radio_3.3"> 75-76 de ani</label><br>
-        <input type="radio" name="cometa" id="radio_3.4"> <label id="labelRadio" for="radio_3.4"> o sută de ani</label><br>
-        <input type="radio" name="cometa" id="radio_3.5"> <label id="labelRadio" for="radio_3.5"> o mie de ani</label><br>
+        <input type="radio" name="cometa" id="radio_3.1" checked="checked">
+            <label class = "labelRadio" for="radio_3.1"> <div class = "cerc"> </div> 4-5 ani </label> <br>
+        <input type="radio" name="cometa" id="radio_3.2">
+            <label class = "labelRadio" for="radio_3.2"> <div class = "cerc"> </div> 22-23 de ani</label><br>
+        <input type="radio" name="cometa" id="radio_3.3">
+            <label   class = "labelRadio" for="radio_3.3"> <div class = "cerc"> </div> 75-76 de ani</label><br>
+        <input type="radio" name="cometa" id="radio_3.4">
+            <label class = "labelRadio" for="radio_3.4"> <div class = "cerc"> </div> o sută de ani</label><br>
+        <input type="radio" name="cometa" id="radio_3.5">
+            <label class = "labelRadio" for="radio_3.5"> <div class = "cerc"> </div> o mie de ani</label><br>
     </form>
 
     <h4> 4. Planeta Neptun e numită după: </h4>
     <form>
-        <input type="radio" name="neptun" id="radio_4.1" checked="checked"> <label id="labelRadio" for="radio_4.1"> lanțul muntos Neptune (Antarctica) </label><br>
-        <input type="radio" name="neptun" id="radio_4.2"> <label id="labelRadio" for="radio_4.2"> Neptune City, New Jersey </label><br>
-        <input type="radio" name="neptun" id="radio_4.4"> <label  id="labelRadio"  for="radio_4.4"> zeul mării în mitologia romană </label><br>
-        <input type="radio" name="neptun" id="radio_4.5"> <label id="labelRadio" for="radio_4.5"> operațiunea Neptun, declanșată de Aliații occidentali în cel de-al Doilea Război Mondial </label><br>
-        <input type="radio" name="neptun" id="radio_4.6"> <label id="labelRadio" for="radio_4.6"> stațiunea de pe litoralul românesc </label><br>
+        <input type="radio" name="neptun" id="radio_4.1" checked="checked">
+            <label class = "labelRadio" for="radio_4.1"> <div class = "cerc"> </div> lanțul muntos Neptune (Antarctica) </label><br>
+        <input type="radio" name="neptun" id="radio_4.2">
+            <label class = "labelRadio" for="radio_4.2"> <div class = "cerc"> </div> Neptune City, New Jersey </label><br>
+        <input type="radio" name="neptun" id="radio_4.4">
+            <label  class = "labelRadio"  for="radio_4.4"> <div class = "cerc"> </div> zeul mării în mitologia romană </label><br>
+        <input type="radio" name="neptun" id="radio_4.5">
+            <label class = "labelRadio" for="radio_4.5"> <div class = "cerc"> </div> operațiunea Neptun, declanșată de Aliații occidentali în cel de-al Doilea Război Mondial </label><br>
+        <input type="radio" name="neptun" id="radio_4.6">
+            <label class = "labelRadio" for="radio_4.6"> <div class = "cerc"> </div> stațiunea de pe litoralul românesc </label><br>
     </form>
 
+    <h4> 5. Planeta din poza alăturată este: </h4>
     <aside>
       <figure class="poza_dreapta">
           <img class="img_dr" src="pics/marte.jpg">
       </figure>
     </aside>
-
-    <h4> 5. Planeta din poza alăturată este: </h4>
     <form>
-        <input type="radio" name="marte" id="radio_5.1" checked="checked"> <label id="labelRadio" for="radio_5.1"> Venus</label> <br>
-        <input type="radio" name="marte" id="radio_5.2"> <label id="labelRadio" for="radio_5.2"> Mercur </label><br>
-        <input type="radio" name="marte" id="radio_5.3"> <label id="labelRadio"  for="radio_5.3"> Marte </label><br>
-        <input type="radio" name="marte" id="radio_5.4"> <label id="labelRadio" for="radio_5.4"> Jupiter </label><br>
-        <input type="radio" name="marte" id="radio_5.5"> <label id="labelRadio" for="radio_5.5"> Saturn </label><br>
+        <input type="radio" name="marte" id="radio_5.1" checked="checked">
+            <label class = "labelRadio" for="radio_5.1"> <div class = "cerc"> </div> Venus</label> <br>
+        <input type="radio" name="marte" id="radio_5.2">
+            <label class = "labelRadio" for="radio_5.2"> <div class = "cerc"> </div> Mercur </label><br>
+        <input type="radio" name="marte" id="radio_5.3">
+            <label class = "labelRadio"  for="radio_5.3"> <div class = "cerc"> </div> Marte </label><br>
+        <input type="radio" name="marte" id="radio_5.4">
+            <label class = "labelRadio" for="radio_5.4"> <div class = "cerc"> </div> Jupiter </label><br>
+        <input type="radio" name="marte" id="radio_5.5">
+            <label class = "labelRadio" for="radio_5.5"> <div class = "cerc"> </div> Saturn </label><br>
     </form>
 
     <h4> 6. Cât la sută din masa totală a sistemului solar reprezintă Soarele? </h4>
     <form>
-        <input type="radio" name="soare" id="radio_6.1" checked="checked"> <label id="labelRadio" for="radio_6.1"> 64,32% </label><br>
-        <input type="radio" name="soare" id="radio_6.2"> <label id="labelRadio" for="radio_6.2"> 78,02% </label><br>
-        <input type="radio" name="soare" id="radio_6.3"> <label id="labelRadio" for="radio_6.3"> 88,89% </label><br>
-        <input type="radio" name="soare" id="radio_6.4"> <label id="labelRadio" for="radio_6.4"> 91,11% </label><br>
-        <input type="radio" name="soare" id="radio_6.5"> <label id="labelRadio" for="radio_6.5"> 99,86% </label><br>
+        <input type="radio" name="soare" id="radio_6.1" checked="checked">
+            <label class = "labelRadio" for="radio_6.1"> <div class = "cerc"> </div> 64,32% </label><br>
+        <input type="radio" name="soare" id="radio_6.2">
+            <label class = "labelRadio" for="radio_6.2"> <div class = "cerc"> </div> 78,02% </label><br>
+        <input type="radio" name="soare" id="radio_6.3">
+            <label class = "labelRadio" for="radio_6.3"> <div class = "cerc"> </div> 88,89% </label><br>
+        <input type="radio" name="soare" id="radio_6.4">
+            <label class = "labelRadio" for="radio_6.4"> <div class = "cerc"> </div> 91,11% </label><br>
+        <input type="radio" name="soare" id="radio_6.5">
+            <label class = "labelRadio" for="radio_6.5"> <div class = "cerc"> </div> 99,86% </label><br>
     </form>
 
     <h4> 7. Inelele lui Saturn sunt formate din: </h4>
     <form>
-        <input type="radio" name="saturn" id="radio_7.1" checked="checked"> <label id="labelRadio" for="radio_7.1"> hidrogen metalic lichid </label><br>
-        <input type="radio" name="saturn" id="radio_7.2"> <label   id="labelRadio"  for="radio_7.2"> gheață, praf și rocă </label><br>
-        <input type="radio" name="saturn" id="radio_7.3"> <label id="labelRadio" for="radio_7.3"> asteroizi</label> <br>
-        <input type="radio" name="saturn" id="radio_7.4"> <label id="labelRadio" for="radio_7.4"> nisip</label> <br>
-        <input type="radio" name="saturn" id="radio_7.5"> <label id="labelRadio" for="radio_7.5"> hidrogen și heliu</label> <br>
+        <input type="radio" name="saturn" id="radio_7.1" checked="checked">
+            <label class = "labelRadio" for="radio_7.1"> <div class = "cerc"> </div> hidrogen metalic lichid </label><br>
+        <input type="radio" name="saturn" id="radio_7.2">
+            <label   class = "labelRadio"  for="radio_7.2"> <div class = "cerc"> </div> gheață, praf și rocă </label><br>
+        <input type="radio" name="saturn" id="radio_7.3">
+            <label class = "labelRadio" for="radio_7.3"> <div class = "cerc"> </div> asteroizi</label> <br>
+        <input type="radio" name="saturn" id="radio_7.4">
+            <label class = "labelRadio" for="radio_7.4"> <div class = "cerc"> </div> nisip</label> <br>
+        <input type="radio" name="saturn" id="radio_7.5">
+            <label class = "labelRadio" for="radio_7.5"> <div class = "cerc"> </div> hidrogen și heliu</label> <br>
     </form>
 
     <h4> 8. Sistemul nostru solar face parte din galaxia: </h4>
     <form>
-        <input type="radio" name="galaxia" id="radio_8.1" checked="checked"> <label   id="labelRadio" for="radio_8.1"> Calea Lactee</label> <br>
-        <input type="radio" name="galaxia" id="radio_8.2"> <label id="labelRadio" for="radio_8.2"> Andromeda</label> <br>
-        <input type="radio" name="galaxia" id="radio_8.3"> <label id="labelRadio" for="radio_8.3"> Sombrero </label><br>
-        <input type="radio" name="galaxia" id="radio_8.4"> <label id="labelRadio" for="radio_8.4"> Centaurus A </label><br>
-        <input type="radio" name="galaxia" id="radio_8.5"> <label id="labelRadio" for="radio_8.5"> Galaxia Pitică din Ursa Mică</label> <br>
+        <input type="radio" name="galaxia" id="radio_8.1" checked="checked">
+            <label   class = "labelRadio" for="radio_8.1"> <div class = "cerc"> </div> Calea Lactee</label> <br>
+        <input type="radio" name="galaxia" id="radio_8.2">
+            <label class = "labelRadio" for="radio_8.2"> <div class = "cerc"> </div> Andromeda</label> <br>
+        <input type="radio" name="galaxia" id="radio_8.3">
+            <label class = "labelRadio" for="radio_8.3"> <div class = "cerc"> </div> Sombrero </label><br>
+        <input type="radio" name="galaxia" id="radio_8.4">
+            <label class = "labelRadio" for="radio_8.4"> <div class = "cerc"> </div> Centaurus A </label><br>
+        <input type="radio" name="galaxia" id="radio_8.5">
+            <label class = "labelRadio" for="radio_8.5"> <div class = "cerc"> </div> Galaxia Pitică din Ursa Mică</label> <br>
     </form>
 
     <h4> 9. Mișcarea de revolutie a Pământului în jurul Soarelui durează: </h4>
     <form>
-        <input type="radio" name="miscarea" id="radio_9.1" checked="checked"> <label id="labelRadio" for="radio_9.1"> o zi </label><br>
-        <input type="radio" name="miscarea" id="radio_9.2"> <label id="labelRadio" for="radio_9.2"> o săptămână </label><br>
-        <input type="radio" name="miscarea" id="radio_9.3"> <label id="labelRadio" for="radio_9.3"> o lună </label><br>
-        <input type="radio" name="miscarea" id="radio_9.4"> <label id="labelRadio" for="radio_9.4"> un an </label><br>
-        <input type="radio" name="miscarea" id="radio_9.6"> <label id="labelRadio" for="radio_9.6"> nicio variantă, pentru că Soarele e cel care se învârte în jurul Pământului</label> <br>
+        <input type="radio" name="miscarea" id="radio_9.1" checked="checked">
+            <label class = "labelRadio" for="radio_9.1"> <div class = "cerc"> </div> o zi </label><br>
+        <input type="radio" name="miscarea" id="radio_9.2">
+            <label class = "labelRadio" for="radio_9.2"> <div class = "cerc"> </div> o săptămână </label><br>
+        <input type="radio" name="miscarea" id="radio_9.3">
+            <label class = "labelRadio" for="radio_9.3"> <div class = "cerc"> </div> o lună </label><br>
+        <input type="radio" name="miscarea" id="radio_9.4">
+            <label class = "labelRadio" for="radio_9.4"> <div class = "cerc"> </div> un an </label><br>
+        <input type="radio" name="miscarea" id="radio_9.6">
+            <label class = "labelRadio" for="radio_9.6"> <div class = "cerc"> </div> nicio variantă, pentru că Soarele e cel care se învârte în jurul Pământului</label> <br>
     </form>
 
+    <h4> 10. Planeta din poza alăturată este: </h4>
     <aside>
       <figure class="poza_dreapta">
           <img class="img_dr" src="pics/uranus.jpg">
       </figure>
     </aside>
-
-    <h4> 10. Planeta din poza alăturată este: </h4>
     <form>
-        <input type="radio" name="uranus" id="radio_10.1" checked="checked"> <label id="labelRadio" for="radio_10.1"> Saturn </label><br>
-        <input type="radio" name="uranus" id="radio_10.2"> <label id="labelRadio" for="radio_10.2"> Jupiter</label> <br>
-        <input type="radio" name="uranus" id="radio_10.3"> <label id="labelRadio" for="radio_10.3"> Venus </label><br>
-        <input type="radio" name="uranus" id="radio_10.4"> <label id="labelRadio" for="radio_10.4"> Mercur </label><br>
-        <input type="radio" name="uranus" id="radio_10.5"> <label  id="labelRadio" for="radio_10.5"> Uranus </label><br>
+        <input type="radio" name="uranus" id="radio_10.1" checked="checked">
+            <label class = "labelRadio" for="radio_10.1"> <div class = "cerc"> </div> Saturn </label><br>
+        <input type="radio" name="uranus" id="radio_10.2">
+            <label class = "labelRadio" for="radio_10.2"> <div class = "cerc"> </div> Jupiter</label> <br>
+        <input type="radio" name="uranus" id="radio_10.3">
+            <label class = "labelRadio" for="radio_10.3"> <div class = "cerc"> </div> Venus </label><br>
+        <input type="radio" name="uranus" id="radio_10.4">
+            <label class = "labelRadio" for="radio_10.4"> <div class = "cerc"> </div> Mercur </label><br>
+        <input type="radio" name="uranus" id="radio_10.5">
+            <label  class = "labelRadio" for="radio_10.5"> <div class = "cerc"> </div> Uranus </label><br>
     </form>
-
 
 
     <br>
     <input id="verificaQuizButon" type="button" value="VERIFICĂ">
 
     <h2 id="scor"> </h2>
+    <p> Pentru mai multe informații vizitați <i id="link"> https://ro.wikipedia.org/wiki/Sistemul_solar</i>. </p>
 
   </section>
 
 
-
-
 </body>
-
 </html>

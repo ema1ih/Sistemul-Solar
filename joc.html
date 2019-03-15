@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="pics/page-icon.png">
+  <link rel="stylesheet" type="text/css" href="space.css">
+  <script src="findOnPageJS.js" defer> </script>
+  <script src="meniuMic.js" defer> </script>
+  <script src="joc.js" defer> </script>
+  <title> Joc interactiv </title>
+</head>
+
+<body>
+
+  <!--************** BARA DE SEARCH **************-->
+
+  <div id="bar">
+    <a href="index.html">
+      <img id="space-icon" src="pics/system-icon.png">
+      <div id="text-bar"> Sistemul Solar </div>
+    </a>
+    <input id="search-bar" type="text" placeholder="Search">
+    <img id="search-icon" src="pics/search-icon.png">
+  </div>
+
+  <!--************** HEADER **************-->
+
+  <header>
+    <h1> Joc interactiv </h1>
+  </header>
+
+  <!--************** MENIUL DROPDOWN **************-->
+
+  <nav>
+    <span id="meniuMic"> >> </span>
+    <ul class="meniu_dropdown">
+      <li> <div class="item"> <a href="planeteInterioare.html"> Planete interioare </a> </div>
+        <ul class="dropdown_content">
+          <li>Mercur
+          <li>Venus
+          <li>Pământ
+          <li>Marte
+        </ul>
+      <li> <div class="item"> <a href="planeteExterioare.html"> Planete exterioare </a> </div>
+        <ul class="dropdown_content">
+          <li>Jupiter
+          <li>Saturn
+          <li>Uranus
+          <li>Neptun
+        </ul>
+      <li> <div class="item"> <a href="comete.html"> Comete </a> </div>
+      <li> <div class="item"> <a href="regiuneaTransneptuniană.html"> Regiunea transneptuniană </a> </div>
+        <ul class="dropdown_content">
+          <li>Pluto și Charon
+          <li>Makemake și Haumea
+        </ul>
+      <li> <div class="item"> <a href="joc.html"> Joc interactiv </a> </div>
+      <li> <div class="item"> <a href="quiz.html"> QUIZ </a> </div>
+    </ul>
+  </nav>
+
+
+  <!--************** CERINTA JOC **************-->
+
+  <section id="cuprins-joc">
+
+    <h4> Poti să pui cele 8 planete în ordine? </h4>
+    <section id="flex-container-planets">
+
+      <div id="planet-img" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img draggable="true" ondragstart="drag(event)" id="Earth" src="pics/planets/earth.png">
+        <figcaption> Earth </figcaption>
+      </div>
+      <div id="planet-img" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img draggable="true" ondragstart="drag(event)" id="Jupiter" src="pics/planets/jupiter.png">
+        <figcaption> Jupiter </figcaption>
+      </div>
+      <div id="planet-img" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img draggable="true" ondragstart="drag(event)" id="Mars" src="pics/planets/mars.png">
+        <figcaption> Mars </figcaption>
+     </div>
+      <div id="planet-img" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img draggable="true" ondragstart="drag(event)" id="Mercury" src="pics/planets/mercury.png">
+        <figcaption> Mercury </figcaption>
+     </div>
+      <div id="planet-img" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img draggable="true" ondragstart="drag(event)" id="Neptune" src="pics/planets/neptune.png">
+        <figcaption> Neptune </figcaption>
+     </div>
+      <div id="planet-img" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img draggable="true" ondragstart="drag(event)" id="Saturn" src="pics/planets/saturn.png">
+        <figcaption> Saturn </figcaption>
+     </div>
+      <div id="planet-img" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img draggable="true" ondragstart="drag(event)" id="Uranus" src="pics/planets/uranus.png">
+        <figcaption> Uranus </figcaption>
+     </div>
+      <div id="planet-img" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img draggable="true" ondragstart="drag(event)" id="Venus" src="pics/planets/venus.png">
+        <figcaption> Venus </figcaption>
+     </div>
+
+    </section>
+  </section>
+
+
+  <!--************** SPATII PLANETE **************-->
+
+  <section id="flex-container">
+
+    <img id="sun" src="pics/planets/sun.png">
+    <div class="planet" ondrop="drop(event)" ondragover="allowDrop(event)"> <figcaption> </figcaption> </div>
+    <div class="planet" ondrop="drop(event)" ondragover="allowDrop(event)"> <figcaption> </figcaption> </div>
+    <div class="planet" ondrop="drop(event)" ondragover="allowDrop(event)"> <figcaption> </figcaption> </div>
+    <div class="planet" ondrop="drop(event)" ondragover="allowDrop(event)"> <figcaption> </figcaption> </div>
+    <div class="planet" ondrop="drop(event)" ondragover="allowDrop(event)"> <figcaption> </figcaption> </div>
+    <div class="planet" ondrop="drop(event)" ondragover="allowDrop(event)"> <figcaption> </figcaption> </div>
+    <div class="planet" ondrop="drop(event)" ondragover="allowDrop(event)"> <figcaption> </figcaption> </div>
+    <div class="planet" ondrop="drop(event)" ondragover="allowDrop(event)"> <figcaption> </figcaption> </div>
+
+  </section>
+
+
+  <!--************** VERIFICA JOC **************-->
+
+  <section id="verifica-sectie">
+    <h4>
+      <input id="verificaPlaneteButon" type="button" value="VERIFICĂ">
+      <span id="scor" style="font-size: 50%">  </span>
+    </h4>
+  </section>
+
+</body>
+</html>

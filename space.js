@@ -28,7 +28,10 @@ for(let index = 0; index < imagini.length; index++)
     poza.src = "pics/" + (index + 1) + ".jpg";
   }
 }
+
+
 /************ RANDOM CORP ****************/
+
 var randomBtn = document.getElementById("randomPlanet");
 
 randomBtn.onclick = function()
@@ -50,56 +53,52 @@ randomBtn.onclick = function()
   }
 
 }
-/************ FIND ON PAGE *******************/
-var searchSubmit = document.getElementById("search-icon");
-var searchBar =  document.getElementById("search-bar");
 
-searchBar.addEventListener("keyup", function(event) {
+/************ MENIU MIC **************/
 
-    if (event.keyCode === 13) {
-        searchSubmit.click();
-    }
-});
-
-function findOnPage(str)
-{
-    //alert(str);
-    //alert(str + window.find(str));
-    if(!window.find(str))
-      {
-        searchBar.style.borderColor = "#d60c0c";
-      }
-      else {
-        searchBar.style.borderColor = "grey";
-      }
-}
-/************ MEDIA QUERY MENIU MIC **************/
-
-var meniuMic = document.getElementById("meniuMic");
-var meniuMare =  document.getElementsByClassName("meniu_dropdown")[0];
-
+var sageata = document.getElementById("meniuMic");
+var meniu =  document.getElementsByClassName("meniu_dropdown")[0];
+var ok = 0;
 
 function deschideMeniu(){
-  meniuMare.style.display = "inline-block";
-  meniuMic.onclick = inchideMeniu;
+  meniu.style.display = "block";
+  sageata.onclick = inchideMeniu;
 }
 
 function inchideMeniu(){
-  meniuMare.style.display = "none";
-  meniuMic.onclick = deschideMeniu;
+  meniu.style.display = "none";
+  sageata.onclick = deschideMeniu;
 }
+
+function deschideMeniuMare(){
+  if(window.innerWidth > 680)
+    {
+      meniu.style.display = "block";
+      ok=1;
+    }
+  if(window.innerWidth <= 680 && ok == 1)
+    {
+      meniu.style.display = "none";
+      ok=0;
+    }
+}
+
 /*****************************************/
 
 window.onload = function()
 {
-    //modalAbonare.style.display = "block";
+    modalAbonare.style.display = "block";
 
-    meniuMic.onclick = deschideMeniu;
-    searchSubmit.onclick = function(){
-      findOnPage(searchBar.value);
-    }
+    var d = new Date();
+    document.getElementById("last-vis").innerHTML = localStorage.getItem("day") + "/" + localStorage.getItem("month") + "/" + localStorage.getItem("year");
+    localStorage.setItem("day",d.getDate());
+    localStorage.setItem("month",d.getMonth() + 1);
+    localStorage.setItem("year",d.getFullYear());
 
+    sageata.onclick = deschideMeniu;
+    setInterval(deschideMeniuMare,1000);
 }
+
 
 /*********** ABONARE BUTON ***********/
 
